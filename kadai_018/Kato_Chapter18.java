@@ -19,7 +19,6 @@ public abstract class Kato_Chapter18 {
 		public void execIntroduce(){
 		commonIntroduce();
 		eachIntroduce();
-	
 	}
-
+		public abstract void setGivenName();
 }
