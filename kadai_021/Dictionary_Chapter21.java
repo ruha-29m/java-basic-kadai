@@ -4,12 +4,9 @@ import java.util.HashMap;
 
 public class Dictionary_Chapter21 {//クラス
 
-	// 辞書に単語を追加
-	public static void main(String[] args) {//メインメソッド
-	}
 
-	public static void Dictionary() {
-		HashMap<String, String> dictionary = new HashMap<>();
+	// 辞書に単語を追加
+		HashMap<String, String> dictionary = new HashMap<>();{
 
 		//10通りの英単語と意味
 		dictionary.put("apple", "りんご");
