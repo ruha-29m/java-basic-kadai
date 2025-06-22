@@ -3,15 +3,13 @@ package kadai_021;
 import java.util.HashMap;
 
 public class Dictionary_Chapter21 {//クラス
+	
+	private HashMap<String, String> dictionary = new HashMap<>();
 
-	// 辞書に単語を追加
-	public static void main(String[] args) {//メインメソッド
-	}
-
-	public static void Dictionary() {
-		HashMap<String, String> dictionary = new HashMap<>();
-
-		//10通りの英単語と意味
+	
+	public Dictionary_Chapter21() {
+	
+		//10通りの英単語と意味を追加
 		dictionary.put("apple", "りんご");
 		dictionary.put("peach", "桃");
 		dictionary.put("banana", "バナナ");
@@ -22,10 +20,9 @@ public class Dictionary_Chapter21 {//クラス
 		dictionary.put("grape", "ぶどう");
 		dictionary.put("muscat", "マスカット");
 		dictionary.put("cherry", "さくらんぼ");
-
+	}
 		//調べる単語,配列
-		String[] wordArray = { "apple", "banana", "grape", "orange" };
-
+		public void referer(String[] wordArray) {
 		for (String word : wordArray) {
 			if (dictionary.containsKey(word)) {
 				String meaning = dictionary.get(word);
@@ -37,3 +34,4 @@ public class Dictionary_Chapter21 {//クラス
 		}
 	}
 }
+//Dictionary Book
