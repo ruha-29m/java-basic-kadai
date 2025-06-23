@@ -1,7 +1,6 @@
 package kadai_028;
 
 import java.util.HashMap;
-import java.util.Random; // コンピュータの手のために追加
 import java.util.Scanner; // ユーザー入力のために追加
 
 public class Jyanken_Chapter28 {//class
@@ -11,9 +10,6 @@ public class Jyanken_Chapter28 {//class
 	private Scanner scanner; // Scannerをフィールドとして定義
 
 	public Jyanken_Chapter28() {
-		Jyanken.put("r", "s");// グーはチョキに勝つ
-		Jyanken.put("s", "p");// チョキはパーに勝つ
-		Jyanken.put("p", "r");// パーはグーに勝つ
 		
 		handNames.put("r", "グー");
 		handNames.put("s", "チョキ");
@@ -36,10 +32,10 @@ public class Jyanken_Chapter28 {//class
 	}
 
 	public void playGame(String playerHand) { //じゃんけんを行う
-		Random random = new Random();
+		
 		String[] handsForComputer = { "r", "s", "p" };// コンピュータがランダムに選ぶための手
-		String computerHand = handsForComputer[random.nextInt(handsForComputer.length)];
-
+		int computerIndex = (int) Math.floor(Math.random() * handsForComputer. length);
+		String computerHand = handsForComputer[computerIndex];
 		
 		System.out.println("自分の手は" + handNames.get(playerHand) + "," + "対戦相手の手は" + handNames.get(computerHand));
 		
